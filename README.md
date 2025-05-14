@@ -2,7 +2,7 @@
 
 [![yamllint](https://github.com/loganmarchione/homelab-k8s/actions/workflows/yamllint.yml/badge.svg)](https://github.com/loganmarchione/homelab-k8s/actions/workflows/yamllint.yml) [![shellcheck](https://github.com/loganmarchione/homelab-k8s/actions/workflows/shellcheck.yml/badge.svg)](https://github.com/loganmarchione/homelab-k8s/actions/workflows/shellcheck.yml)
 
-A K3s cluster defined as code.
+A K3s cluster defined as code
 
 ## Stack
 
