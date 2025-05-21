@@ -42,21 +42,21 @@
     }
   ],
   "flux": {
-    "fileMatch": [
-      "cluster/.+\\.ya?ml$"
+    "managerFilePatterns": [
+      "/cluster/.+\\.ya?ml$/"
     ]
   },
   "helm-values": {
-    "fileMatch": [
-      "cluster/.+\\.ya?ml$"
+    "managerFilePatterns": [
+      "/cluster/.+\\.ya?ml$/"
     ],
     "ignorePaths": [
       "cluster/base/"
     ]
   },
   "kubernetes": {
-    "fileMatch": [
-      "cluster/.+\\.ya?ml$"
+    "managerFilePatterns": [
+      "/cluster/.+\\.ya?ml$/"
     ],
     "ignorePaths": [
       "cluster/base/"
@@ -65,8 +65,8 @@
   "customManagers": [
     {
       "customType": "regex",
-      "fileMatch": [
-        "cluster/.+/kustomization.ya?ml$"
+      "managerFilePatterns": [
+        "/cluster/.+/kustomization.ya?ml$/"
       ],
       "matchStrings": [
         "https://github\\.com/(?<depName>.*/.*?)/releases/download/(?<currentValue>.*?)/"
@@ -75,8 +75,8 @@
     },
     {
       "customType": "regex",
-      "fileMatch": [
-        "cluster/.+/kustomization.ya?ml$"
+      "managerFilePatterns": [
+        "/cluster/.+/kustomization.ya?ml$/"
       ],
       "matchStrings": [
         "https://raw\\.githubusercontent\\.com/(?<depName>[^/]*/[^/]*)/(?<currentValue>.*?)/"
