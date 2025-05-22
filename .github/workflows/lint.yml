@@ -1,0 +1,30 @@
+---
+name: Lint
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+  schedule:
+    - cron: "0 5 * * 0"
+  workflow_dispatch:
+
+jobs:
+  shellcheck:
+    name: Shellcheck
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out the codebase
+      uses: actions/checkout@v4
+
+    - name: Install dependencies
+      run: |
+        sudo apt update && sudo apt install -y shellcheck
+        shellcheck --version
+
+    - name: Lint
+      run: |
+        grep -rl '^#!/.*sh' * | xargs -n1 shellcheck -e SC2059
