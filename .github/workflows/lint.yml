@@ -28,3 +28,20 @@ jobs:
       - name: Lint
         run: |
           grep -rl '^#!/.*sh' * | xargs -n1 shellcheck -e SC2059
+
+  yamllint:
+    name: yamllint
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out the codebase
+        uses: actions/checkout@v4
+
+      - name: Run yamllint
+        run: |
+          python3 --version
+          pip3 install --user yamllint
+          yamllint --version
+          yamllint --list-files .
+          yamllint .
