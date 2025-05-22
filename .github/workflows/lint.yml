@@ -17,14 +17,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Check out the codebase
-      uses: actions/checkout@v4
+      - name: Check out the codebase
+        uses: actions/checkout@v4
 
-    - name: Install dependencies
-      run: |
-        sudo apt update && sudo apt install -y shellcheck
-        shellcheck --version
+      - name: Install dependencies
+        run: |
+          sudo apt update && sudo apt install -y shellcheck
+          shellcheck --version
 
-    - name: Lint
-      run: |
-        grep -rl '^#!/.*sh' * | xargs -n1 shellcheck -e SC2059
+      - name: Lint
+        run: |
+          grep -rl '^#!/.*sh' * | xargs -n1 shellcheck -e SC2059
