@@ -47,17 +47,11 @@
     ]
   },
   "helm-values": {
-    "managerFilePatterns": [
-      "/cluster/.+\\.ya?ml$/"
-    ],
     "ignorePaths": [
       "cluster/base/"
     ]
   },
   "kubernetes": {
-    "managerFilePatterns": [
-      "/cluster/.+\\.ya?ml$/"
-    ],
     "ignorePaths": [
       "cluster/base/"
     ]
