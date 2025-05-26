@@ -47,13 +47,21 @@
     ]
   },
   "helm-values": {
+    "managerFilePatterns": [
+      "/cluster/apps/.+/helmrelease\\.ya?ml$/"
+    ],
     "ignorePaths": [
       "cluster/base/"
     ]
   },
   "kubernetes": {
+    "managerFilePatterns": [
+      "/cluster/apps/.+\\.ya?ml$/"
+    ],
     "ignorePaths": [
-      "cluster/base/"
+      "cluster/base/",
+      "**/helmrelease.yaml",
+      "**/helmrelease.yml"
     ]
   },
   "customManagers": [
