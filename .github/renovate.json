@@ -44,10 +44,6 @@
   "flux": {
     "managerFilePatterns": [
       "/cluster/.+\\.ya?ml$/"
-    ],
-    "ignorePaths": [
-      "**/helmrelease.yaml",
-      "**/helmrelease.yml"
     ]
   },
   "kubernetes": {
