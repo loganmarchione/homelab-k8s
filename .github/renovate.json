@@ -44,14 +44,10 @@
   "flux": {
     "managerFilePatterns": [
       "/cluster/.+\\.ya?ml$/"
-    ]
-  },
-  "helm-values": {
-    "managerFilePatterns": [
-      "/cluster/apps/.+/helmrelease\\.ya?ml$/"
     ],
     "ignorePaths": [
-      "cluster/base/"
+      "**/helmrelease.yaml",
+      "**/helmrelease.yml"
     ]
   },
   "kubernetes": {
@@ -59,9 +55,7 @@
       "/cluster/apps/.+\\.ya?ml$/"
     ],
     "ignorePaths": [
-      "cluster/base/",
-      "**/helmrelease.yaml",
-      "**/helmrelease.yml"
+      "cluster/base/"
     ]
   },
   "customManagers": [
