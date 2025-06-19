@@ -39,6 +39,17 @@
         "corentinth/it-tools"
       ],
       "versioning": "loose"
+    },
+    {
+      "matchManagers": [
+        "regex"
+      ],
+      "matchUpdateTypes": [
+        "patch"
+      ],
+      "automerge": true,
+      "automergeType": "pr",
+      "platformAutomerge": true
     }
   ],
   "flux": {
