@@ -20,6 +20,10 @@ spec:
       targetPort: traefik
       port: 9000
       protocol: TCP
+    - name: metrics
+      targetPort: 9100  # Still target port 9100 inside the pod
+      port: 9102        # But expose it as port 9102 on the service (avoiding conflict)
+      protocol: TCP
   selector:
     app.kubernetes.io/instance: traefik-kube-system
     app.kubernetes.io/name: traefik
@@ -55,7 +59,7 @@ spec:
               service:
                 name: traefik-dashboard-service
                 port:
-                  number: 9000
+                  number: 9102
   tls:
     - hosts:
         - traefik-k3s.${SECRET_INTERNAL_DOMAIN_NAME}
