@@ -14,7 +14,7 @@ spec:
       # https://doc.traefik.io/traefik/operations/dashboard/
       - "--api"
       - "--api.dashboard=true"
-      - "--api.insecure=false"
+      - "--api.insecure=true"
       # Enable Prometheus metrics
       # https://doc.traefik.io/traefik/reference/install-configuration/observability/metrics/#prometheus
       - "--metrics.prometheus=true"
