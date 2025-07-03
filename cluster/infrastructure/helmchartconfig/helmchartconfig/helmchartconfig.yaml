@@ -15,6 +15,9 @@ spec:
       - "--api"
       - "--api.dashboard=true"
       - "--api.insecure=false"
+      # Enable Prometheus metrics
+      # https://doc.traefik.io/traefik/reference/install-configuration/observability/metrics/#prometheus
+      - "--metrics.prometheus=true"
       # Creating a custom HelmChartConfig to allow Traefik to talk to self-signed certificates
       # https://github.com/k3s-io/k3s/issues/1313
       - "--serversTransport.insecureSkipVerify=true"
