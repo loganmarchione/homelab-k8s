@@ -70,9 +70,7 @@ kubectl create secret generic cluster-user-auth \
 
 kubectl create secret generic traefik-secret-vars \
   --namespace=kube-system \
-  --type=kubernetes.io/basic-auth \
-  --from-literal=username=admin \
-  --from-literal=password=super_secret_password_goes_here
+  --from-literal=users="admin:$(openssl passwd -apr1 super_secret_password_goes_here)"
 
 kubectl create secret generic cloudflare-api-token-secret \
   --namespace=cert-manager \
