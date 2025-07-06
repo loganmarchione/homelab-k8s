@@ -26,7 +26,20 @@ spec:
   values:
     server:
       ingress:
-        enabled: false
+        enabled: true
+        ingressClassName: traefik
+        annotations:
+          cert-manager.io/cluster-issuer: letsencrypt-production
+          cert-manager.io/private-key-algorithm: RSA
+          cert-manager.io/private-key-size: 4096
+          cert-manager.io/private-key-rotation-policy: Always
+          traefik.ingress.kubernetes.io/router.tls: "true"
+        hosts:
+          - prometheus-k3s.${SECRET_INTERNAL_DOMAIN_NAME}
+        tls:
+          - secretName: prometheus-k3s-tls
+            hosts:
+              - prometheus-k3s.${SECRET_INTERNAL_DOMAIN_NAME}
       persistentVolume:
         enabled: true
         storageClass: local-path-customized
