@@ -47,6 +47,19 @@ spec:
       service:
         enabled: true
         type: ClusterIP
+      extraSecretMounts:
+        - name: traefik-auth
+          secretName: traefik-scrape-credentials
+          mountPath: /etc/prometheus/secrets/traefik-auth
+          readOnly: true
+      extraScrapeConfigs: |
+        - job_name: 'traefik-k3s'
+          static_configs:
+            - targets: ['traefik-dashboard-service.kube-system:9102']
+          metrics_path: '/metrics'
+          basic_auth:
+            username_file: /etc/prometheus/secrets/traefik-auth/username
+            password_file: /etc/prometheus/secrets/traefik-auth/password
     alertmanager:
       enabled: false
     kube-state-metrics:
