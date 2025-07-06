@@ -15,7 +15,7 @@ metadata:
   namespace: kube-system
   annotations:
     prometheus.io/scrape: "true"
-    prometheus.io/port: "9102"
+    prometheus.io/port: "9100"
     prometheus.io/path: /metrics
     prometheus.io/scheme: http
 spec:
