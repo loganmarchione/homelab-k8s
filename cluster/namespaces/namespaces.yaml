@@ -42,6 +42,11 @@ metadata:
 apiVersion: v1
 kind: Namespace
 metadata:
+  name: prometheus
+---
+apiVersion: v1
+kind: Namespace
+metadata:
   name: registry
 ---
 apiVersion: v1
