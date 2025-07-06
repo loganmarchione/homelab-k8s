@@ -13,6 +13,11 @@ kind: Service
 metadata:
   name: traefik-dashboard-service
   namespace: kube-system
+  annotations:
+    prometheus.io/scrape: "true"
+    prometheus.io/port: "9102"
+    prometheus.io/path: /metrics
+    prometheus.io/scheme: http
 spec:
   type: ClusterIP
   ports:
