@@ -55,3 +55,4 @@ spec:
       enabled: false
     prometheus-pushgateway:
       enabled: false
+
