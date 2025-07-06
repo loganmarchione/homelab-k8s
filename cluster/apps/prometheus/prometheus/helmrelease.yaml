@@ -32,12 +32,13 @@ spec:
         storageClass: local-path-customized
         size: 8Gi
       service:
+        enabled: true
         type: ClusterIP
-      alertmanager:
-        enabled: false
-      kube-state-metrics:
-        enabled: false
-      prometheus-node-exporter:
-        enabled: false
-      prometheus-pushgateway:
-        enabled: false
+    alertmanager:
+      enabled: false
+    kube-state-metrics:
+      enabled: false
+    prometheus-node-exporter:
+      enabled: false
+    prometheus-pushgateway:
+      enabled: false
