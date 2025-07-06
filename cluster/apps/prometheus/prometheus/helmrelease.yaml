@@ -43,7 +43,7 @@ spec:
       persistentVolume:
         enabled: true
         storageClass: local-path-customized
-        size: 8Gi
+        size: 6Gi
       service:
         enabled: true
         type: ClusterIP
