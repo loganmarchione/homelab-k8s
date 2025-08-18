@@ -101,11 +101,6 @@ The applications that run in my homelab (listed in alphabetical order)
         <td>General-purpose web UI for Kubernetes clusters</td>
     </tr>
     <tr>
-        <td><img vertical-align=baseline width="32" src="https://raw.githubusercontent.com/loganmarchione/svg-assets/main/assets/miniflux.svg"></td>
-        <td><a href="https://hub.docker.com/r/miniflux/miniflux">Miniflux</a></td>
-        <td>Minimalist and opinionated feed reader</td>
-    </tr>
-    <tr>
         <td><img vertical-align=baseline width="32" src="https://raw.githubusercontent.com/loganmarchione/svg-assets/main/assets/pairdrop.svg"></td>
         <td><a href="https://hub.docker.com/r/linuxserver/pairdrop">PairDrop</a></td>
         <td>Local file sharing in your web browser (AirDrop alternative)</td>
