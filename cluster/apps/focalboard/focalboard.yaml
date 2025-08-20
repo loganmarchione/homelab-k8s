@@ -32,7 +32,7 @@ spec:
     spec:
       containers:
         - name: focalboard
-          image: mattermost/focalboard:7.11.3
+          image: mattermost/focalboard:7.11.3@sha256:ff99720fd4735e8abaa2c7bf26b8b3c448f55b1014f9440358dc7b1452488583
           ports:
             - containerPort: 8000
           volumeMounts:
