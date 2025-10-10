@@ -32,7 +32,7 @@ spec:
     spec:
       containers:
         - name: registry
-          image: registry:3.0.0@sha256:1e96c37f6c9f3f6c8dc26453348105ce5c297c9e8f46e19d2993bdce3545963c
+          image: registry:3.0.0@sha256:491add1c62291ba36613f60a5d61d22a13f23839e69d3c3a25da114da327a7e6
           ports:
             - containerPort: 5000
           env:
