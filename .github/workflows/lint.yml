@@ -18,7 +18,7 @@ jobs:
 
     steps:
       - name: Check out the codebase
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
 
       - name: Install dependencies
         run: |
@@ -36,7 +36,7 @@ jobs:
 
     steps:
       - name: Check out the codebase
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
 
       - name: Install yamllint
         run: |
