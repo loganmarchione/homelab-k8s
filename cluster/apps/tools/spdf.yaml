@@ -23,6 +23,9 @@ spec:
           env:
             - name: SYSTEM_ENABLEANALYTICS
               value: "false"
+          env:
+            - name: SECURITY_ENABLELOGIN
+              value: "false"
 ---
 apiVersion: v1
 kind: Service
