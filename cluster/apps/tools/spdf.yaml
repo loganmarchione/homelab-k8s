@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: spdf
-          image: ghcr.io/stirling-tools/s-pdf:1.5.0@sha256:bfe2b8dd378c4f3d5fc1d2fc7649a357d0916b3a713022aa70ac3f08d6302cbc
+          image: ghcr.io/stirling-tools/s-pdf:1.6.0@sha256:1f73a8f898fe269cbbccea3be577064dd87fc4334de349fcc5b1afa1bcebf240
           ports:
             - containerPort: 8080
           env:
