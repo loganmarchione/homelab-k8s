@@ -6,18 +6,18 @@ metadata:
   namespace: kube-system
 spec:
   valuesContent: |-
+    # https://github.com/k3s-io/k3s-charts/blob/main/charts/traefik/37.1.1%2Bup37.1.0/values.yaml
+    logs:
+      general:
+        # Log level: TRACE, DEBUG, INFO, WARN, ERROR, FATAL, PANIC
+        # https://doc.traefik.io/traefik/observability/logs/
+        level: "WARN"
     additionalArguments:
-      # Log level: TRACE, DEBUG, INFO, WARN, ERROR, FATAL, PANIC
-      # https://doc.traefik.io/traefik/observability/logs/
-      - "--log.level=WARN"
       # Enable the Traefik dashboard
       # https://doc.traefik.io/traefik/operations/dashboard/
       - "--api"
       - "--api.dashboard=true"
       - "--api.insecure=true"
-      # Enable Prometheus metrics
-      # https://doc.traefik.io/traefik/reference/install-configuration/observability/metrics/#prometheus
-      - "--metrics.prometheus=true"
       # Creating a custom HelmChartConfig to allow Traefik to talk to self-signed certificates
       # https://github.com/k3s-io/k3s/issues/1313
       - "--serversTransport.insecureSkipVerify=true"
