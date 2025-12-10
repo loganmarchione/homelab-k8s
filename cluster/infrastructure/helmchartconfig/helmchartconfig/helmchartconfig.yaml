@@ -6,7 +6,7 @@ metadata:
   namespace: kube-system
 spec:
   valuesContent: |-
-    globalArguments:
+    additionalArguments:
       # Log level: TRACE, DEBUG, INFO, WARN, ERROR, FATAL, PANIC
       # https://doc.traefik.io/traefik/observability/logs/
       - "--log.level=WARN"
