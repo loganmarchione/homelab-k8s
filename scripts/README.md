@@ -47,39 +47,23 @@ cat $HOME/.kube/config
 
 ### Flux
 
-Now, create a series of secrets.
+First, create a series of secrets. This will be different for everyone, but I'm using Ansible to do this since I already use Ansible to provision my servers.
 
-⚠️ WARNING ⚠️
+Below are the secrets that I create. You can search this repo for the secret name to see what keys need to be set.
 
-Keep in mind that these secrets will be in your shell history and clipboard (you should clear both). Obviously replace the secrets (don't copy/paste directly).
+| Secret name                   | Secret namespace |
+|-------------------------------|------------------|
+| `cloudflare-api-token-secret` | `cert-manager`   |
+| `cluster-secret-vars`         | `flux-system`    |
+| `pgadmin-secret-vars`         | `pgadmin4`       |
+| `traefik-secret-vars`         | `kube-system`    |
+
+I also copy my kubeconfig to the Ansible user's home directory (required for Ansible to use the `kubernetes.core.k8s` module).
 
 ```
-kubectl create secret generic cluster-secret-vars \
-  --namespace=flux-system \
-  --from-literal=SECRET_INTERNAL_DOMAIN_NAME=your.domain.com \
-  --from-literal=SECRET_LETS_ENCRYPT_EMAIL=name@email.com \
-  --from-literal=FOCALBOARD_DB_HOST=hostname \
-  --from-literal=FOCALBOARD_DB_USER=admin \
-  --from-literal=FOCALBOARD_DB_PASS=super_secret_password_goes_here \
-  --from-literal=FOCALBOARD_DB_NAME=DBName
-
-kubectl create secret generic cluster-user-auth \
-  --namespace flux-system \
-  --from-literal=username=admin \
-  --from-literal=password='bcrypt_password_hash_goes_here'
-
-kubectl create secret generic traefik-secret-vars \
-  --namespace=kube-system \
-  --from-literal=users="admin:$(openssl passwd -apr1 super_secret_password_goes_here)"
-
-kubectl create secret generic cloudflare-api-token-secret \
-  --namespace=cert-manager \
-  --from-literal=api-token='token_goes_here'
-
-kubectl create secret generic pgadmin-secret-vars \
-  --namespace=pgadmin4 \
-  --from-literal=PGADMIN_DEFAULT_EMAIL=name@email.com \
-  --from-literal=PGADMIN_DEFAULT_PASSWORD=super_secret_password_goes_here
+sudo -u ansible mkdir -p /home/ansible/.kube
+sudo cp $HOME/.kube/config /home/ansible/.kube/config
+sudo chown ansible:ansible /home/ansible/.kube/config
 ```
 
 Verify the secrets were created.

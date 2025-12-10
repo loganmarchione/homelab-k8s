@@ -17,5 +17,3 @@ spec:
     substituteFrom:
       - kind: Secret
         name: cluster-secret-vars
-      - kind: Secret
-        name: cluster-user-auth
