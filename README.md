@@ -58,6 +58,11 @@ The infrastructure that everything else depends on
         <td><a href="https://cert-manager.io/">cert-manager</a></td>
         <td>X.509 certificate management for Kubernetes</td>
     </tr>
+    <tr>
+        <td><img vertical-align=baseline width="32" src="https://raw.githubusercontent.com/loganmarchione/svg-assets/main/assets/kubernetes.svg"></td>
+        <td><a href="https://github.com/stakater/Reloader/">reloader</a></td>
+        <td>A Kubernetes controller that automatically triggers rollouts of workloads whenever referenced Secrets or ConfigMaps are updated</td>
+    </tr>
 </table>
 
 ### `cluster/apps`
