@@ -82,17 +82,17 @@ The applications that run in my homelab (listed in alphabetical order)
     </tr>
     <tr>
         <td><img vertical-align=baseline width="32" src="https://raw.githubusercontent.com/loganmarchione/svg-assets/main/assets/visualstudiocode.svg"></td>
-        <td><a href="https://hub.docker.com/r/linuxserver/code-server">Code Server</a></td>
+        <td><a href="https://hub.docker.com/r/linuxserver/code-server">Code Server</a> (<a href="https://github.com/linuxserver/docker-code-server">source</a>)</td>
         <td>A Dockerized version of <a href="https://github.com/coder/code-server">code-server</a></td>
     </tr>
     <tr>
          <td><img vertical-align=baseline width="32" src="https://raw.githubusercontent.com/loganmarchione/svg-assets/main/assets/cyberchef.svg"></td>
         <td><a href="https://github.com/gchq/CyberChef">CyberChef</a></td>
-        <td>A Dockerized version of <a href="https://github.com/gchq/CyberChef/">GCHQ's Cyber Swiss Army Knife</a></td>
+        <td>GCHQ's Cyber Swiss Army Knife</td>
     </tr>
     <tr>
         <td><img vertical-align=baseline width="32" src="https://raw.githubusercontent.com/loganmarchione/svg-assets/main/assets/diagramsdotnet.svg"></td>
-        <td><a href="https://hub.docker.com/r/jgraph/drawio">Diagrams.net (aka Draw.io)</a></td>
+        <td><a href="https://hub.docker.com/r/jgraph/drawio">Diagrams.net (aka Draw.io)</a> (<a href="https://github.com/jgraph/drawio">source</a>)</td>
         <td>Diagram creation</td>
     </tr>
     <tr>
@@ -102,7 +102,7 @@ The applications that run in my homelab (listed in alphabetical order)
     </tr>
     <tr>
         <td><img vertical-align=baseline width="32" src="https://raw.githubusercontent.com/loganmarchione/svg-assets/main/assets/ittools.svg"></td>
-        <td><a href="https://hub.docker.com/r/corentinth/it-tools">IT-Tools</a></td>
+        <td><a href="https://hub.docker.com/r/corentinth/it-tools">IT-Tools</a> (<a href="https://github.com/CorentinTh/it-tools">source</a>)</td>
         <td>Collection of handy online tools for developers</td>
     </tr>
     <tr>
@@ -112,43 +112,43 @@ The applications that run in my homelab (listed in alphabetical order)
     </tr>
     <tr>
         <td><img vertical-align=baseline width="32" src="https://raw.githubusercontent.com/loganmarchione/svg-assets/main/assets/pairdrop.svg"></td>
-        <td><a href="https://hub.docker.com/r/linuxserver/pairdrop">PairDrop</a></td>
-        <td>Local file sharing in your web browser (AirDrop alternative)</td>
+        <td><a href="https://hub.docker.com/r/linuxserver/pairdrop">PairDrop</a> (<a href="https://github.com/linuxserver/docker-pairdrop">source</a>)</td>
+        <td>Transfer files cross-platform (AirDrop alternative)</td>
     </tr>
     <tr>
         <td><img vertical-align=baseline width="32" src="https://raw.githubusercontent.com/loganmarchione/svg-assets/main/assets/postgresql.svg"></td>
-        <td><a href="https://hub.docker.com/r/dpage/pgadmin4">pgAdmin 4</a></td>
-        <td>Management tool for Postgres</td>
+        <td><a href="https://hub.docker.com/r/dpage/pgadmin4">pgAdmin 4</a> (<a href="https://github.com/pgadmin-org/pgadmin4">source</a>)</td>
+        <td>Web-based management tool for Postgres</td>
     </tr>
     <tr>
         <td><img vertical-align=baseline width="32" src="https://raw.githubusercontent.com/loganmarchione/svg-assets/main/assets/portainer.svg"></td>
-        <td><a href="https://github.com/portainer/portainer">Portainer</a></td>
+        <td><a href="https://www.portainer.io/">Portainer</a> (<a href="https://github.com/portainer/portainer">source</a>)</td>
         <td>Web-based management for Kubernetes</td>
     </tr>
     <tr>
         <td><img vertical-align=baseline width="32" src="https://raw.githubusercontent.com/loganmarchione/svg-assets/main/assets/docker.svg"></td>
-        <td><a href="https://hub.docker.com/_/registry">Registry</a></td>
+        <td><a href="https://hub.docker.com/_/registry">Registry</a> (<a href="https://github.com/distribution/distribution">source</a>)</td>
         <td>Docker image registry</td>
     </tr>
     <tr>
         <td><img vertical-align=baseline width="32" src="https://raw.githubusercontent.com/loganmarchione/svg-assets/main/assets/stirlingpdf.svg"></td>
-        <td><a href="https://hub.docker.com/r/frooodle/s-pdf">StirlingPDF</a></td>
-        <td>web-based PDF manipulation tool</td>
+        <td><a href="https://hub;docker.com/r/frooodle/s-pdf">StirlingPDF</a> (<a href="https://github.com/Stirling-Tools/Stirling-PDF">source</a>)</td>
+        <td>Web-based PDF manipulation tool</td>
     </tr>
     <tr>
         <td><img vertical-align=baseline width="32" src="https://raw.githubusercontent.com/loganmarchione/svg-assets/main/assets/stringis.svg"></td>
-        <td><a href="https://hub.docker.com/r/daveperrett/string-is">string.is</a></td>
-        <td>A Dockerized version of <a href="https://github.com/recurser/string-is">string.is</a></td>
+        <td><a href="https://hub.docker.com/r/daveperrett/string-is">string.is</a> (<a href="https://github.com/recurser/string-is">source</a>)</td>
+        <td>An open-source, privacy-friendly online string toolkit for developers</td>
     </tr>
     <tr>
         <td><img vertical-align=baseline width="32" src="https://raw.githubusercontent.com/loganmarchione/svg-assets/main/assets/traefik-gopher.svg"></td>
         <td><a href="https://doc.traefik.io/traefik/operations/dashboard/">Traefik dashboard</a></td>
-        <td>This was already installed, just exposing it with ingress and basic auth</a></td>
+        <td>This was already installed with K3s, just exposing it with ingress and basic auth</a></td>
     </tr>
     <tr>
         <td><img vertical-align=baseline width="32" src="https://raw.githubusercontent.com/loganmarchione/svg-assets/main/assets/go-blue.svg"></td>
-        <td><a href="https://hub.docker.com/r/traefik/whoami/">whoami</a></td>
-        <td>Test web app written in Go</td>
+        <td><a href="https://hub.docker.com/r/traefik/whoami/">whoami</a> (<a href="https://github.com/traefik/whoami">source</a>)</td>
+        <td>Tiny Go server that prints os information and HTTP request to output</td>
     </tr>
 </table>
 
