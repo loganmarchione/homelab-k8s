@@ -2,7 +2,7 @@
 apiVersion: postgresql.cnpg.io/v1
 kind: Cluster
 metadata:
-  name: homebox
+  name: homebox-postgres
   namespace: homebox
 # https://cloudnative-pg.io/documentation/1.28/cloudnative-pg.v1/#postgresql-cnpg-io-v1-ClusterSpec
 spec:
