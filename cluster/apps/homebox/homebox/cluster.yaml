@@ -9,13 +9,10 @@ spec:
   instances: 1
   # https://github.com/cloudnative-pg/postgres-containers
   imageName: ghcr.io/cloudnative-pg/postgresql:17.7-minimal-trixie
- 
   storage:
     size: 1Gi
     storageClass: local-path-customized
- 
   postgresql:
-
   bootstrap:
     initdb:
       database: homebox
