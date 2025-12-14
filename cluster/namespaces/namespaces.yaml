@@ -12,7 +12,17 @@ metadata:
 apiVersion: v1
 kind: Namespace
 metadata:
+  name: cnpg-system
+---
+apiVersion: v1
+kind: Namespace
+metadata:
   name: flux-system
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: homebox
 ---
 apiVersion: v1
 kind: Namespace
