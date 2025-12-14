@@ -155,13 +155,3 @@ The applications that run in my homelab (listed in alphabetical order)
 ## Installation
 
 See the [README](/scripts/README.md) for more information
-
-## TODO
-
-- [x] Change intervals under `cluster/charts` from 1m to 1h
-- [x] [Auto-issue certs](https://cert-manager.io/docs/usage/ingress/) using cert-manager
-- [x] Setup [renovatebot](https://github.com/renovatebot/renovate)
-- [x] Add [cert-manager CRDs](https://github.com/loganmarchione/homelab-k8s/blob/master/cluster/crds/cert-manager/kustomization.yaml) to renovatebot (discussion [here](https://github.com/renovatebot/renovate/discussions/20118))
-- [ ] Setup [Docker digest pinning](https://docs.renovatebot.com/docker/#digest-pinning)
-- [ ] Change install bash scripts to Ansible or Terraform (example [here](https://github.com/lieberlois/k3s-hetzner-tf/blob/main/resources.tf#L13-L28))
-- [x] Setup yamlint (using [GitHub Actions](https://github.com/ibiqlik/action-yamllint) or just by running `pip3 install yamllint` in the workflow)
