@@ -91,6 +91,11 @@ The applications that run in my homelab (listed in alphabetical order)
         <td>Diagram creation</td>
     </tr>
     <tr>
+        <td><img vertical-align=baseline width="32" src="https://raw.githubusercontent.com/loganmarchione/svg-assets/main/assets/homebox.svg"></td>
+        <td><a href="https://github.com/sysadminsmedia/homebox">HomeBox</a></td>
+        <td>A continuation of HomeBox the inventory and organization system built for the Home User</td>
+    </tr>
+    <tr>
         <td><img vertical-align=baseline width="32" src="https://raw.githubusercontent.com/loganmarchione/svg-assets/main/assets/ittools.svg"></td>
         <td><a href="https://hub.docker.com/r/corentinth/it-tools">IT-Tools</a></td>
         <td>Collection of handy online tools for developers</td>
