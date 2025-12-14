@@ -1,0 +1,106 @@
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: homebox-data-pvc
+  namespace: homebox
+  annotations:
+    volumeType: local
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi
+  storageClassName: local-path-customized
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: homebox-deployment
+  namespace: homebox
+spec:
+  replicas: 1
+  revisionHistoryLimit: 2
+  selector:
+    matchLabels:
+      app: homebox
+  template:
+    metadata:
+      labels:
+        app: homebox
+    spec:
+      containers:
+        - name: homebox
+          image: ghcr.io/sysadminsmedia/homebox:0.21.0-rootless@sha256:572a356f3c18b880feb83987aad1c32c9472fd3212f02312342451fee78792c0
+          ports:
+            - containerPort: 7745
+          env:
+            - name: HBOX_DATABASE_DRIVER
+              value: "postgres"
+            - name: HBOX_DATABASE_HOST
+              value: "homebox-postgres-rw.homebox.svc.cluster.local"
+            - name: HBOX_DATABASE_PORT
+              value: "5432"
+            - name: HBOX_DATABASE_DATABASE
+              value: "homebox"
+            - name: HBOX_DATABASE_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  name: homebox-postgres
+                  key: username
+            - name: HBOX_DATABASE_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: homebox-postgres
+                  key: password
+          volumeMounts:
+            - name: data
+              mountPath: /data
+      volumes:
+        - name: data
+          persistentVolumeClaim:
+            claimName: homebox-data-pvc
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: homebox-service
+  namespace: homebox
+spec:
+  type: ClusterIP
+  ports:
+    - name: http
+      targetPort: 7745
+      port: 7745
+      protocol: TCP
+  selector:
+    app: homebox
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: homebox-ingress
+  namespace: homebox
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-production
+    cert-manager.io/private-key-algorithm: RSA
+    cert-manager.io/private-key-size: 4096
+    cert-manager.io/private-key-rotation-policy: Always
+    traefik.ingress.kubernetes.io/router.tls: "true"
+spec:
+  rules:
+    - host: homebox.${SECRET_INTERNAL_DOMAIN_NAME}
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: homebox-service
+                port:
+                  number: 7745
+  tls:
+    - hosts:
+        - homebox.${SECRET_INTERNAL_DOMAIN_NAME}
+      secretName: homebox-tls
