@@ -8,7 +8,7 @@ metadata:
 spec:
   interval: 1m0s
   ref:
-    branch: master
+    branch: homebox
   secretRef:
     name: flux-system
   url: ssh://git@github.com/loganmarchione/homelab-k8s
