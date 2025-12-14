@@ -18,23 +18,23 @@ The core components of the cluster
     </tr>
     <tr>
         <td><img vertical-align=baseline width="32" src="https://raw.githubusercontent.com/loganmarchione/svg-assets/main/assets/k3s.svg"></td>
-        <td><a href="https://k3s.io/">K3s</a></td>
+        <td><a href="https://k3s.io/">K3s</a> (<a href="https://github.com/k3s-io/k3s">source</a>)</td>
         <td>Lightweight Kubernetes</td>
     </tr>
     <tr>
         <td><img vertical-align=baseline width="32" src="https://raw.githubusercontent.com/loganmarchione/svg-assets/main/assets/traefik-gopher.svg"></td>
-        <td><a href="https://traefik.io/">Traefik</a></td>
+        <td><a href="https://traefik.io/">Traefik</a> (<a href="https://github.com/traefik/traefik">source</a>)</td>
         <td>Kubernetes Ingress Controller</td>
     </tr>
     <tr>
         <td><img vertical-align=baseline width="32" src="https://raw.githubusercontent.com/loganmarchione/svg-assets/main/assets/helm.svg"></td>
-        <td><a href="https://helm.sh/">Helm</a></td>
-        <td>The package manager for Kubernetes</td>
+        <td><a href="https://helm.sh/">Helm</a> (<a href="https://github.com/helm/helm">source</a>)</td>
+        <td>The Kubernetes Package Manager</td>
     </tr>
     <tr>
         <td><img vertical-align=baseline width="32" src="https://raw.githubusercontent.com/loganmarchione/svg-assets/main/assets/fluxcd.svg"></td>
-        <td><a href="https://fluxcd.io/">Flux CD</a></td>
-        <td>Continuous delivery solutions for Kubernetes </td>
+        <td><a href="https://fluxcd.io/">Flux CD</a> (<a href="https://github.com/fluxcd/flux2">source</a>)</td>
+        <td>Continuous delivery solution for Kubernetes</td>
     </tr>
 </table>
 
@@ -55,13 +55,18 @@ The infrastructure that everything else depends on
     </tr>
     <tr>
         <td><img vertical-align=baseline width="32" src="https://raw.githubusercontent.com/loganmarchione/svg-assets/main/assets/certmanager.svg"></td>
-        <td><a href="https://cert-manager.io/">cert-manager</a></td>
+        <td><a href="https://cert-manager.io/">cert-manager</a> (<a href="https://github.com/cert-manager/cert-manager">source</a>)</td>
         <td>X.509 certificate management for Kubernetes</td>
     </tr>
     <tr>
         <td><img vertical-align=baseline width="32" src="https://raw.githubusercontent.com/loganmarchione/svg-assets/main/assets/kubernetes.svg"></td>
         <td><a href="https://github.com/stakater/Reloader/">reloader</a></td>
         <td>A Kubernetes controller that automatically triggers rollouts of workloads whenever referenced Secrets or ConfigMaps are updated</td>
+    </tr>
+    <tr>
+        <td><img vertical-align=baseline width="32" src="https://raw.githubusercontent.com/loganmarchione/svg-assets/main/assets/postgresql.svg"></td>
+        <td><a href="https://cloudnative-pg.io/">CloudNativePG</a> (<a href="https://github.com/cloudnative-pg/cloudnative-pg">source</a>)</td>
+        <td>Seamlessly manage PostgreSQL databases within Kubernetes environments</td>
     </tr>
 </table>
 
