@@ -85,6 +85,13 @@
         "https://raw\\.githubusercontent\\.com/(?<depName>[^/]*/[^/]*)/(?<currentValue>.*?)/"
       ],
       "datasourceTemplate": "github-tags"
-    }
+    },
+    {
+      "customType": "regex",
+      "managerFilePatterns": ["/cluster/.+\\.ya?ml$/"],
+      "matchStrings": [
+        "imageName:\\s*(?<depName>ghcr\\.io/[^:]+):(?<currentValue>[^\\s]+)"
+      ],
+      "datasourceTemplate": "docker"
   ]
 }
