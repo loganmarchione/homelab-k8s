@@ -93,5 +93,6 @@
         "imageName:\\s*(?<depName>ghcr\\.io/[^:]+):(?<currentValue>[^\\s]+)"
       ],
       "datasourceTemplate": "docker"
+    }
   ]
 }
