@@ -111,6 +111,11 @@ The applications that run in my homelab (listed in alphabetical order)
         <td>General-purpose web UI for Kubernetes clusters</td>
     </tr>
     <tr>
+        <td><img vertical-align=baseline width="32" src="https://raw.githubusercontent.com/loganmarchione/svg-assets/main/assets/manyfold.svg"></td>
+        <td><a href="https://manyfold.app/">Manyfold</a> (<a href="https://github.com/manyfold3d/manyfold">source</a>)</td>
+        <td>A self-hosted digital asset manager for 3d print files</td>
+    </tr>
+    <tr>
         <td><img vertical-align=baseline width="32" src="https://raw.githubusercontent.com/loganmarchione/svg-assets/main/assets/pairdrop.svg"></td>
         <td><a href="https://hub.docker.com/r/linuxserver/pairdrop">PairDrop</a> (<a href="https://github.com/linuxserver/docker-pairdrop">source</a>)</td>
         <td>Transfer files cross-platform (AirDrop alternative)</td>
