@@ -3,7 +3,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: valkey-deployment
-  namespace: valkey
+  namespace: manyfold
 spec:
   replicas: 1
   revisionHistoryLimit: 2
@@ -25,7 +25,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: valkey-service
-  namespace: valkey
+  namespace: manyfold
 spec:
   type: ClusterIP
   ports:
