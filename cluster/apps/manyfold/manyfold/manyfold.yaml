@@ -64,10 +64,10 @@ spec:
                   name: manyfold
                   key: secretKeyBase
           volumeMounts:
-            - name: data
-              mountPath: /data
+            - name: models
+              mountPath: /models
       volumes:
-        - name: data
+        - name: models
           persistentVolumeClaim:
             claimName: manyfold-data-pvc
 ---
