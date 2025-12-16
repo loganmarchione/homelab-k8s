@@ -57,7 +57,7 @@ spec:
             - name: DEMO_MODE
               value: "false"
             - name: REDIS_URL
-              value: "valkey.manyfold.svc.cluster.local"
+              value: "redis://valkey.manyfold.svc.cluster.local:6379/1"
             - name: SECRET_KEY_BASE
               valueFrom:
                 secretKeyRef:
