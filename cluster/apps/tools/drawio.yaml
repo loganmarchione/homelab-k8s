@@ -2,7 +2,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: drawio-deployment
+  name: drawio
   namespace: tools
 spec:
   replicas: 1
@@ -27,7 +27,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: drawio-service
+  name: drawio
   namespace: tools
 spec:
   type: ClusterIP
@@ -42,7 +42,7 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: drawio-ingress
+  name: drawio
   namespace: tools
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt-production
@@ -59,7 +59,7 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: drawio-service
+                name: drawio
                 port:
                   number: 8080
   tls:

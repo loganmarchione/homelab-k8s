@@ -2,7 +2,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: cyberchef-deployment
+  name: cyberchef
   namespace: tools
 spec:
   replicas: 1
@@ -24,7 +24,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: cyberchef-service
+  name: cyberchef
   namespace: tools
 spec:
   type: ClusterIP
@@ -39,7 +39,7 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: cyberchef-ingress
+  name: cyberchef
   namespace: tools
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt-production
@@ -56,7 +56,7 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: cyberchef-service
+                name: cyberchef
                 port:
                   number: 80
   tls:

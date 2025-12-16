@@ -2,7 +2,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: pairdrop-deployment
+  name: pairdrop
   namespace: tools
 spec:
   replicas: 1
@@ -24,7 +24,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: pairdrop-service
+  name: pairdrop
   namespace: tools
 spec:
   type: ClusterIP
@@ -39,7 +39,7 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: pairdrop-ingress
+  name: pairdrop
   namespace: tools
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt-production
@@ -56,7 +56,7 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: pairdrop-service
+                name: pairdrop
                 port:
                   number: 3000
   tls:

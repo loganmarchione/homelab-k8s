@@ -17,7 +17,7 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: pgadmin4-deployment
+  name: pgadmin4
   namespace: pgadmin4
 spec:
   replicas: 1
@@ -59,7 +59,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: pgadmin4-service
+  name: pgadmin4
   namespace: pgadmin4
 spec:
   type: ClusterIP
@@ -74,7 +74,7 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: pgadmin4-ingress
+  name: pgadmin4
   namespace: pgadmin4
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt-production
@@ -91,7 +91,7 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: pgadmin4-service
+                name: pgadmin4
                 port:
                   number: 80
   tls:

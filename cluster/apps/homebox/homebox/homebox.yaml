@@ -17,7 +17,7 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: homebox-deployment
+  name: homebox
   namespace: homebox
 spec:
   replicas: 1
@@ -67,7 +67,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: homebox-service
+  name: homebox
   namespace: homebox
 spec:
   type: ClusterIP
@@ -82,7 +82,7 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: homebox-ingress
+  name: homebox
   namespace: homebox
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt-production
@@ -99,7 +99,7 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: homebox-service
+                name: homebox
                 port:
                   number: 7745
   tls:

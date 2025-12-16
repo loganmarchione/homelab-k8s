@@ -17,7 +17,7 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: codeserver-deployment
+  name: codeserver
   namespace: codeserver
 spec:
   replicas: 1
@@ -51,7 +51,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: codeserver-service
+  name: codeserver
   namespace: codeserver
 spec:
   type: ClusterIP
@@ -66,7 +66,7 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: codeserver-ingress
+  name: codeserver
   namespace: codeserver
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt-production
@@ -83,7 +83,7 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: codeserver-service
+                name: codeserver
                 port:
                   number: 8443
   tls:

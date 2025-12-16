@@ -2,7 +2,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: valkey-deployment
+  name: valkey
   namespace: manyfold
 spec:
   replicas: 1
@@ -24,7 +24,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: valkey-service
+  name: valkey
   namespace: manyfold
 spec:
   type: ClusterIP

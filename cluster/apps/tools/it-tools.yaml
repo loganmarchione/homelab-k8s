@@ -2,7 +2,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: it-tools-deployment
+  name: it-tools
   namespace: tools
 spec:
   replicas: 1
@@ -24,7 +24,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: it-tools-service
+  name: it-tools
   namespace: tools
 spec:
   type: ClusterIP
@@ -39,7 +39,7 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: it-tools-ingress
+  name: it-tools
   namespace: tools
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt-production
@@ -56,7 +56,7 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: it-tools-service
+                name: it-tools
                 port:
                   number: 80
   tls:

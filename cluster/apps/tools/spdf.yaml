@@ -2,7 +2,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: spdf-deployment
+  name: spdf
   namespace: tools
 spec:
   replicas: 1
@@ -29,7 +29,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: spdf-service
+  name: spdf
   namespace: tools
 spec:
   type: ClusterIP
@@ -44,7 +44,7 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: spdf-ingress
+  name: spdf
   namespace: tools
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt-production
@@ -61,7 +61,7 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: spdf-service
+                name: spdf
                 port:
                   number: 8080
   tls:
