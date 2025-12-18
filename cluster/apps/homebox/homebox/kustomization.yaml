@@ -4,3 +4,4 @@ kind: Kustomization
 resources:
   - cluster.yaml
   - homebox.yaml
+  - backup-cronjob.yaml
