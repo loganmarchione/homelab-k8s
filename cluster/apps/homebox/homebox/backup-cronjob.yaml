@@ -21,26 +21,7 @@ spec:
           containers:
             - name: pg-backup
               image: ghcr.io/cloudnative-pg/postgresql:17.7-minimal-trixie@sha256:dd6f9cda42c24bcd8ee2b619516e2aa5ddc40317c00d55d808543cef51286701
-              command: ["/bin/sh"]
-              args:
-                - -c
-                - |
-                  set -e
-                  BACKUP_DIR="/backups"
-                  BACKUP_FILE="${BACKUP_DIR}/${APP_NAME}-$(date +%Y%m%d_%H%M).sql.gz"
-
-                  echo "$(date +%Y%m%d_%H%M) - INFO: Starting backup of ${DATABASE_NAME}"
-                  pg_dump -h "${DATABASE_HOST}" -U "${PGUSER}" -d "${DATABASE_NAME}" | gzip > "${BACKUP_FILE}"
-
-                  if [ -f "${BACKUP_FILE}" ]; then
-                    BACKUP_SIZE=$(du -h "${BACKUP_FILE}" | cut -f1)
-                    echo "$(date +%Y%m%d_%H%M) - INFO: Backup completed successfully: ${BACKUP_FILE} (${BACKUP_SIZE})"
-                  else
-                    echo "$(date +%Y%m%d_%H%M) - ERROR: Backup file was not created"
-                    exit 1
-                  fi
-
-                  echo "$(date +%Y%m%d_%H%M) - INFO: Backup process completed"
+              command: ["/bin/sh", "/scripts/backup.sh"]
               env:
                 ########################################
                 # Change these values when copying cronjob
@@ -64,9 +45,15 @@ spec:
               volumeMounts:
                 - name: backup-volume
                   mountPath: /backups
+                - name: script
+                  mountPath: /scripts
           volumes:
             - name: backup-volume
               hostPath:
                 # this already exists on the host
                 path: /custom/backup/backup
                 type: Directory
+            - name: script
+              configMap:
+                name: postgres-backup-script
+                defaultMode: 0755

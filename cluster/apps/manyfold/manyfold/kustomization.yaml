@@ -5,4 +5,5 @@ resources:
   - cluster.yaml
   - valkey.yaml
   - manyfold.yaml
+  - backup-script.yaml
   - backup-cronjob.yaml
