@@ -90,7 +90,7 @@
       "customType": "regex",
       "managerFilePatterns": ["/cluster/.+\\.ya?ml$/"],
       "matchStrings": [
-        "imageName:\\s*(?<depName>ghcr\\.io/[^:]+):(?<currentValue>[^\\s]+)"
+        "imageName:\\s*(?<depName>[^:]+):(?<currentValue>[^@\\s]+)(@(?<currentDigest>sha256:[a-f0-9]+))?"
       ],
       "datasourceTemplate": "docker"
     }
