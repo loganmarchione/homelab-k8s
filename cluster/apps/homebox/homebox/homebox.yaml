@@ -34,7 +34,7 @@ spec:
     spec:
       containers:
         - name: homebox
-          image: ghcr.io/sysadminsmedia/homebox:0.22.3-rootless@sha256:6a7b282513fa105ef432a390a22f1970b4ca0eee9fc9cfa9858465dad0603426
+          image: ghcr.io/sysadminsmedia/homebox:0.23.0-rootless@sha256:c0a4a98ee7298ecc01b6b4d474c4ad26cbe54ca730a3bb71e3806cc0de9be551
           ports:
             - containerPort: 7745
           env:
