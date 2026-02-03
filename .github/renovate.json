@@ -45,7 +45,8 @@
         "custom.regex"
       ],
       "matchUpdateTypes": [
-        "patch"
+        "patch",
+        "digest"
       ],
       "automerge": true,
       "automergeType": "pr",
