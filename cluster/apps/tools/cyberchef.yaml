@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: cyberchef
-          image: ghcr.io/gchq/cyberchef:10.20.0@sha256:925058eb6af4bcc6300d529ab5d5d4dc40abdf1aa80919e1fb6e1d9694b15bc5
+          image: ghcr.io/gchq/cyberchef:10.21.0@sha256:9b9a97107b8522778def9b213b534e0ebf00f14a54889b7ee5b02b9fdbf45b92
           ports:
             - containerPort: 80
 ---
