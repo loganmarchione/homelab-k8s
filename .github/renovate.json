@@ -5,6 +5,7 @@
     "schedule:nonOfficeHours",
     "group:allDigest"
   ],
+  "timezone": "America/New_York",
   "dependencyDashboard": true,
   "dependencyDashboardTitle": "Renovate Dashboard",
   "labels": [
