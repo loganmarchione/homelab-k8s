@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: valkey
-          image: valkey/valkey:9.0.3-alpine@sha256:ad09f25978db13ed3ed7c635a0e43118568deca056ed8f7a5020f40632e2923e
+          image: valkey/valkey:9.0.3-alpine@sha256:ad4541b28b017bf4cd83ee057c51aafb21ea32e898e3f3b8b75e268650f2ac20
           ports:
             - containerPort: 6379
           livenessProbe:
