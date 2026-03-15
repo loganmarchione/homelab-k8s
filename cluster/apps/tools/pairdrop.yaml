@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: pairdrop
-          image: lscr.io/linuxserver/pairdrop:1.11.2@sha256:9a0f8dc04637f4a97f9d53ba276c019a972248a04cb94cf7c4b8f7f04cac7783
+          image: lscr.io/linuxserver/pairdrop:1.11.2@sha256:830bd38a0bff0befbb5353c44a30d366f8ed692e68318a03939041e624b30c58
           ports:
             - containerPort: 3000
 ---
