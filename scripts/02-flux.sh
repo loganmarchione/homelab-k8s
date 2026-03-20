@@ -31,6 +31,7 @@ installFlux() {
 
   message "STATE: Bootstrapping Flux"
   flux bootstrap github \
+  --token-auth \
   --owner="${GITHUB_USER}" \
   --repository="${GITHUB_REPO}" \
   --branch="${GITHUB_BRANCH}" \
