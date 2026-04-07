@@ -20,7 +20,7 @@ spec:
             fsGroup: 0
           containers:
             - name: pg-backup
-              image: ghcr.io/cloudnative-pg/postgresql:17.9-minimal-trixie@sha256:945021c544177c461162ccbc64a354625d6e88c2aa754bd601584a13fa2a94ab
+              image: ghcr.io/cloudnative-pg/postgresql:17.9-minimal-trixie@sha256:fe95726aef119ce1dd1e7fde3d41a03414a5ccd10ee050220dd846f638f85c6a
               command: ["/bin/sh", "/scripts/backup.sh"]
               env:
                 ########################################
