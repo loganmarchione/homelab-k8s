@@ -8,7 +8,7 @@ metadata:
 spec:
   instances: 1
   # https://github.com/cloudnative-pg/postgres-containers
-  imageName: ghcr.io/cloudnative-pg/postgresql:17.9-minimal-trixie@sha256:90fea0da5614954a4db52afa90324fbf522ecbc5321953210f2b76d51c9ed481
+  imageName: ghcr.io/cloudnative-pg/postgresql:17.9-minimal-trixie@sha256:785ce76bd65381e07e9c3f7018dd2295c83756f06c0d9ab1c97a4e91d379eeb6
   storage:
     size: 1Gi
     storageClass: local-path-customized
