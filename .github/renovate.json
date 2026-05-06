@@ -3,6 +3,7 @@
   "extends": [
     "config:recommended",
     "schedule:nonOfficeHours",
+    "helpers:pinGitHubActionDigests",
     "group:allDigest"
   ],
   "timezone": "America/New_York",
