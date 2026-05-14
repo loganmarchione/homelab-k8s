@@ -34,7 +34,7 @@ spec:
     spec:
       containers:
         - name: manyfold
-          image: ghcr.io/manyfold3d/manyfold:0.138.0@sha256:8e68b3b9b85dfb6fe38538cf44b7bd27670e41fd8adf5ffe47b9a177ac37e32f
+          image: ghcr.io/manyfold3d/manyfold:0.140.1@sha256:9bdc6cc6a2941eecbd987c33f0551aac538a2b874bbe4201162c7df0b9477064
           ports:
             - containerPort: 3214
           env:
